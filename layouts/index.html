@@ -1,0 +1,501 @@
+{{ define "main" }}
+
+<!-- ═══════ HERO ═══════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-tag">OpenCAS Maintainers &amp; Commercial Partners</div>
+    <h1>High-performance block storage <em>caching</em> for modern data centers</h1>
+    <p class="hero-sub">We build, maintain, and commercially support OpenCAS — the open-source framework for accelerating block storage with intelligent caching. From kernel-level engineering to enterprise integration.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Talk to an Engineer</a>
+      <a href="#opencas" class="btn btn-ghost">Explore Solutions ↓</a>
+    </div>
+    <div class="hero-metrics">
+      <div class="metric">
+        <span class="metric-value">Since 2016</span>
+        <span class="metric-label">Developing CAS technology</span>
+      </div>
+      <div class="metric">
+        <span class="metric-value">BSD-3</span>
+        <span class="metric-label">Open-source core license</span>
+      </div>
+      <div class="metric">
+        <span class="metric-value">Global</span>
+        <span class="metric-label">Customer reach</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ ABOUT ═══════ -->
+<section id="about">
+  <div class="container">
+    <span class="section-label">About Unvertical</span>
+    <h2 class="section-title">The team behind OpenCAS</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p><strong>Unvertical</strong> is a Poland-based company founded by the core maintainers of the Open Cache Acceleration Software (OpenCAS) project. We've been building CAS technology since 2016 — first inside Intel, then as the lead open-source maintainers and commercial partners for organizations worldwide after Intel CAS reached end-of-life in 2023.</p>
+        <p>Our expertise sits at the intersection of <strong>Linux kernel development</strong>, <strong>storage systems architecture</strong>, and <strong>NVM technology</strong>. We know this codebase intimately because we wrote it, and we understand the workloads it serves because we've deployed it across production environments worldwide.</p>
+        <p>We operate on an <strong>open-core model</strong>: the foundational caching engine remains fully open source under the BSD-3 license, while we offer enterprise tooling, professional services, and custom development to organizations that need production-grade support and integration.</p>
+      </div>
+      <div class="about-highlights">
+        <div class="highlight-item">
+          <div class="highlight-icon">⚙</div>
+          <h4>Kernel-Level Expertise</h4>
+          <p>Deep experience with Linux kernel storage subsystem, out-of-tree module development, and performance optimization at the block layer.</p>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">🔓</div>
+          <h4>Open Source First</h4>
+          <p>Core caching engine (OCF) and Linux adapters are and will remain open source. We build trust through transparency.</p>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">🌍</div>
+          <h4>Global Reach, European Roots</h4>
+          <p>Based in Poland, serving data center operators and enterprise teams across Europe, North America, and Asia-Pacific.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     ▓▓▓ OPENCAS PRODUCT SECTION ▓▓▓
+     ═══════════════════════════════════════════════════ -->
+
+<div class="product-divider teal" id="opencas">
+  <div class="product-divider-inner">
+    <span class="pd-badge teal">Production Ready · Open Source</span>
+    <h2>OpenCAS</h2>
+    <p class="pd-sub">Open Cache Acceleration Software — a mature, battle-tested block-level caching framework that accelerates backend storage using higher-performance local media.</p>
+  </div>
+</div>
+
+<!-- OpenCAS: Overview -->
+<section class="cas-overview">
+  <div class="container">
+    <span class="section-label">OpenCAS · Overview</span>
+    <h2 class="section-title">Accelerate your storage, transparently</h2>
+    <div class="cas-overview-grid">
+      <div class="cas-overview-text">
+        <p>OpenCAS sits between your applications and backend storage devices, caching frequently accessed data on faster local media (NVMe SSDs, Intel Optane, or any high-performance block device). It operates at the <strong>block level as a Linux kernel module</strong>, which means it's transparent to applications — no code changes, no API integrations, no filesystem dependencies.</p>
+        <p>At the core is the <strong>Open CAS Framework (OCF)</strong>, a high-performance caching meta-library written in C. OCF is modular and embeddable: it powers both the Linux kernel adapter (Open CAS Linux) and an SPDK block device adapter for user-space storage applications.</p>
+        <p>OpenCAS supports <strong>multiple cache modes</strong> (write-through, write-back, write-around, pass-through), flexible I/O classification by block size, file path, directory, or metadata type, and ships with a comprehensive test framework for validation and CI/CD integration.</p>
+        <p>The entire project is licensed under <strong>BSD-3</strong> — no vendor lock-in, no usage restrictions, no surprises.</p>
+      </div>
+      <div class="cas-capabilities">
+        <h4>Key Capabilities</h4>
+        <ul class="feature-list">
+          <li>Block-level caching — transparent to all applications and filesystems</li>
+          <li>Multiple cache modes: write-through, write-back, write-around, pass-through</li>
+          <li>Flexible I/O classification by block size, file, directory, or metadata</li>
+          <li>Linux kernel module with active maintenance for current kernel versions</li>
+          <li>SPDK adapter for user-space storage applications</li>
+          <li>Modular OCF core — embeddable in custom storage stacks</li>
+          <li>Comprehensive test framework and CI/CD tooling</li>
+          <li>BSD-3 license — fully open, no restrictions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OpenCAS: Open-Core Model -->
+<section class="model-section">
+  <div class="container">
+    <span class="section-label">OpenCAS · Licensing</span>
+    <h2 class="section-title">Open core, honest boundaries</h2>
+    <p class="section-desc">The caching engine is free and open source. Premium tools and professional services are how we sustain the project and deliver enterprise-grade reliability.</p>
+    <div class="model-columns">
+      <div class="model-col open">
+        <div class="model-col-header">
+          <div class="model-col-icon">⚡</div>
+          <div>
+            <h3>Open Source</h3>
+            <div class="model-sub">BSD-3 License · Free forever</div>
+          </div>
+        </div>
+        <ul class="model-list">
+          <li>Open CAS Framework (OCF) — the core caching library</li>
+          <li>Open CAS Linux — kernel adapters and CLI management tools</li>
+          <li>SPDK block device adapter</li>
+          <li>Test framework and CI/CD automation</li>
+          <li>Community documentation and getting-started guides</li>
+        </ul>
+      </div>
+      <div class="model-col premium">
+        <div class="model-col-header">
+          <div class="model-col-icon">◆</div>
+          <div>
+            <h3>Premium</h3>
+            <div class="model-sub">Subscription · Per-node licensing</div>
+          </div>
+        </div>
+        <ul class="model-list">
+          <li>Metadata migration tools between OpenCAS versions</li>
+          <li>Integration layers for enterprise storage platforms</li>
+          <li>Advanced telemetry and monitoring dashboards</li>
+          <li>Pre-built Prometheus/Grafana monitoring stack</li>
+          <li>Priority bug fixes and security patches</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OpenCAS: Services -->
+<section>
+  <div class="container">
+    <span class="section-label">OpenCAS · Services</span>
+    <h2 class="section-title">From evaluation to production</h2>
+    <p class="section-desc">Whether you need help evaluating OpenCAS, integrating it into a custom kernel, or tuning it for your workload — we're the team that wrote it.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <h3>Consulting</h3>
+        <p>Architecture review and workload analysis for your storage stack. We assess whether caching is the right approach, recommend configuration strategies, and design integration plans for your infrastructure.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <h3>Configuration Validation</h3>
+        <p>OpenCAS runs as an out-of-tree kernel module. We build, test, and certify releases for your specific kernel version, OS distribution, and hardware — including custom or modified kernels.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <h3>Custom Development</h3>
+        <p>Need a new integration layer for your storage platform? A custom caching policy? We develop features in the core engine and build dedicated plugins for your environment.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <h3>Premium Support</h3>
+        <p>SLA-backed technical support with guaranteed response times. Direct access to the engineers who maintain the codebase. Priority issue resolution and root cause analysis.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <h3>Training</h3>
+        <p>Hands-on programs for your infrastructure team. Covers OpenCAS architecture, deployment best practices, performance tuning, troubleshooting, and operational runbooks. On-site or remote.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <h3>Benchmarking &amp; PoC</h3>
+        <p>We run OpenCAS on your actual workloads, produce detailed performance reports, and help you make informed decisions with real data — not vendor marketing numbers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OpenCAS: Use Cases -->
+<section class="model-section">
+  <div class="container">
+    <span class="section-label">OpenCAS · Use Cases</span>
+    <h2 class="section-title">Where OpenCAS makes the difference</h2>
+    <p class="section-desc">OpenCAS serves environments where the latency or throughput of accessing backend storage directly limits business outcomes.</p>
+    <div class="usecases-grid">
+      <div class="usecase">
+        <div class="usecase-icon teal">🖥</div>
+        <div>
+          <h4>Virtualization Platforms</h4>
+          <p>KVM/QEMU, Proxmox, OpenStack — accelerate virtual disk I/O with transparent block-level caching. No guest OS modifications required.</p>
+        </div>
+      </div>
+      <div class="usecase">
+        <div class="usecase-icon teal">🗄</div>
+        <div>
+          <h4>Database Acceleration</h4>
+          <p>Reduce query latency for databases running on SAN or shared storage. Effective for mixed OLTP/OLAP workloads where hot dataset fits in cache.</p>
+        </div>
+      </div>
+      <div class="usecase">
+        <div class="usecase-icon teal">🏢</div>
+        <div>
+          <h4>HCI &amp; Software-Defined Storage</h4>
+          <p>Storage vendors can embed OCF directly into their products. OEM licensing available for ISVs building HCI or SDS solutions.</p>
+        </div>
+      </div>
+      <div class="usecase">
+        <div class="usecase-icon teal">📊</div>
+        <div>
+          <h4>SAN &amp; Direct-Attached Acceleration</h4>
+          <p>Cache frequently accessed blocks from slower SAN or DAS backends on local NVMe. Transparent to applications, no storage rebuild needed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OpenCAS: CTA -->
+<section class="cta-section teal-bg" style="padding: 72px 0;">
+  <div class="container">
+    <div class="cta-inner">
+      <h2 class="section-title">Ready to accelerate your storage?</h2>
+      <p class="section-desc">Whether you need a proof of concept, expert guidance on your caching strategy, or ongoing production support — let's talk.</p>
+      <div class="cta-actions">
+        <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
+        <a href="{{ .Site.Params.githubURL }}" class="btn btn-ghost" target="_blank" rel="noopener">Browse the Code ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     ▓▓▓ NVMCC PRODUCT SECTION ▓▓▓
+     ═══════════════════════════════════════════════════ -->
+
+<div class="product-divider amber" id="nvmcc">
+  <div class="product-divider-inner">
+    <span class="pd-badge amber">Early Access · Proof of Concept</span>
+    <h2>NVMCC</h2>
+    <p class="pd-sub">NVM Cache for Compute — next-generation caching middleware that replaces expensive DRAM page cache with cost-effective NVM in disaggregated storage architectures.</p>
+  </div>
+</div>
+
+<!-- NVMCC: The Problem -->
+<section class="nvmcc-overview">
+  <div class="container">
+    <span class="section-label amber">NVMCC · The Idea</span>
+    <h2 class="section-title">Trade DRAM cost for NVM capacity</h2>
+    <p class="section-desc" style="margin-bottom: 16px;">Modern data centers separate compute from storage for scalability, but this creates a latency problem. The standard fix — buffering data in DRAM page cache — is expensive and getting more so.</p>
+    <p class="section-desc">NVMCC takes a fundamentally different approach.</p>
+    <div class="nvmcc-how">
+      <div class="nvmcc-step" data-step="01">
+        <h4>Observe the mismatch</h4>
+        <p>In disaggregated storage, DRAM used for caching is vastly overprovisioned in speed relative to the remote backend it fronts. That performance headroom is wasted money.</p>
+      </div>
+      <div class="nvmcc-step" data-step="02">
+        <h4>Replace with cheaper media</h4>
+        <p>NVM (SLC NAND) is ~25× cheaper per GB than DDR5 but still orders of magnitude faster than remote storage. More capacity means higher hit ratio, which means better aggregate performance.</p>
+      </div>
+      <div class="nvmcc-step" data-step="03">
+        <h4>Use the spare bandwidth</h4>
+        <p>Latency-bound workloads can't saturate network links to storage nodes. NVMCC uses that idle bandwidth for speculative prefetching onto local NVM — trading bandwidth for latency.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NVMCC: Economics -->
+<section>
+  <div class="container">
+    <span class="section-label amber">NVMCC · Economics</span>
+    <h2 class="section-title">Why this matters now</h2>
+    <p class="section-desc">DRAM costs are rising sharply as manufacturers shift capacity from DDR5 to HBM for AI workloads. A technology that reduces DRAM dependency addresses an increasingly urgent need.</p>
+    <div class="economics-grid">
+      <div class="econ-card">
+        <div class="econ-value">~25×</div>
+        <div class="econ-label">Cost difference</div>
+        <div class="econ-desc">DDR5 at ~$25/GB vs SLC NAND at ~$1/GB. More cache capacity for less money.</div>
+      </div>
+      <div class="econ-card">
+        <div class="econ-value">+50%</div>
+        <div class="econ-label">DRAM price increase</div>
+        <div class="econ-desc">Spot prices rose ~50% in Q4 2025, with contract prices projected to follow at 45-50% QoQ.</div>
+      </div>
+      <div class="econ-card">
+        <div class="econ-value">30-50%</div>
+        <div class="econ-label">DRAM share of server CAPEX</div>
+        <div class="econ-desc">Memory is one of the largest line items in server costs. Reducing it has outsized impact on TCO.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NVMCC: Differentiation -->
+<section class="model-section">
+  <div class="container">
+    <span class="section-label amber">NVMCC · What's New</span>
+    <h2 class="section-title">The first NVM-first compute-side cache</h2>
+    <p class="section-desc">Every existing caching solution treats NVM as a secondary tier behind DRAM. NVMCC inverts this hierarchy — NVM is the primary caching layer, not an afterthought.</p>
+    <div class="usecases-grid" style="margin-top: 48px;">
+      <div class="usecase amber">
+        <div class="usecase-icon amber">⚡</div>
+        <div>
+          <h4>NVM-First Cache Engine</h4>
+          <p>Purpose-built for NVM characteristics: read/write asymmetry, higher latency than DRAM, I/O granularity. Not a DRAM engine with NVM bolted on.</p>
+        </div>
+      </div>
+      <div class="usecase amber">
+        <div class="usecase-icon amber">📡</div>
+        <div>
+          <h4>Bandwidth-Aware Prefetching</h4>
+          <p>Real-time analysis of I/O patterns and network utilization. Proactively fetches data onto local NVM using spare link bandwidth — possible only with NVM's capacity advantage.</p>
+        </div>
+      </div>
+      <div class="usecase amber">
+        <div class="usecase-icon amber">🧠</div>
+        <div>
+          <h4>Minimal DRAM Footprint</h4>
+          <p>Redesigned metadata structures to minimize the engine's own DRAM consumption. The whole point is to reduce memory costs — the engine itself can't be the problem.</p>
+        </div>
+      </div>
+      <div class="usecase amber">
+        <div class="usecase-icon amber">🔌</div>
+        <div>
+          <h4>Transparent Block-Level Integration</h4>
+          <p>Plugs in as a middleware layer compatible with Ceph, KVM/QEMU, Proxmox, HDFS, and distributed databases. No application changes required.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NVMCC: Target Environments -->
+<section>
+  <div class="container">
+    <span class="section-label amber">NVMCC · Target Environments</span>
+    <h2 class="section-title">Built for disaggregated storage</h2>
+    <p class="section-desc">NVMCC is designed for environments where compute and storage are separated — the architecture pattern where its NVM-first approach delivers the most value.</p>
+    <div class="usecases-grid" style="margin-top: 48px;">
+      <div class="usecase amber">
+        <div class="usecase-icon amber">☁</div>
+        <div>
+          <h4>Distributed Storage Clusters</h4>
+          <p>Ceph, NFS-over-RDMA, NVMe-oF — reduce latency from remote storage nodes by caching and prefetching on local NVM at the compute layer.</p>
+        </div>
+      </div>
+      <div class="usecase amber">
+        <div class="usecase-icon amber">🖥</div>
+        <div>
+          <h4>Virtualization with Remote Storage</h4>
+          <p>KVM/QEMU, Proxmox, OpenStack — accelerate VM disk I/O transparently while cutting the DRAM budget allocated to host page cache.</p>
+        </div>
+      </div>
+      <div class="usecase amber">
+        <div class="usecase-icon amber">🗄</div>
+        <div>
+          <h4>Databases on Shared Storage</h4>
+          <p>Reduce query latency and DRAM costs for databases running against remote or shared storage backends. Particularly effective for read-heavy and mixed workloads.</p>
+        </div>
+      </div>
+      <div class="usecase amber">
+        <div class="usecase-icon amber">📊</div>
+        <div>
+          <h4>Big Data &amp; Analytics</h4>
+          <p>HDFS, Spark, data lakes — cache iteratively accessed datasets locally on NVM. Speculative prefetching is especially effective for sequential scan patterns.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NVMCC: Early Access CTA -->
+<section class="cta-section amber-bg" style="padding: 72px 0;">
+  <div class="container">
+    <div class="cta-inner">
+      <span class="section-label amber">Early Adopter Program</span>
+      <h2 class="section-title">Help shape the future of compute-side caching</h2>
+      <p class="section-desc">NVMCC is currently at proof-of-concept stage. We're looking for 2–3 design partners with disaggregated storage environments who want to validate the technology on real workloads and influence the product roadmap.</p>
+      <div class="cta-actions">
+        <a href="#contact" class="btn btn-amber">Apply for Early Access</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════ WHY UNVERTICAL ═══════ -->
+<section id="why">
+  <div class="container">
+    <span class="section-label">Why Unvertical</span>
+    <h2 class="section-title">The maintainers are the vendor</h2>
+    <p class="section-desc">You're not buying from a company that packages someone else's open-source project. You're working directly with the people who architect, maintain, and evolve the technology.</p>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-number">10+</div>
+        <h4>Years on CAS</h4>
+        <p>Building caching technology since 2016 — from Intel CAS to OpenCAS and now NVMCC.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-number">0</div>
+        <h4>Layers of Indirection</h4>
+        <p>Your support tickets are handled by the people who write the code. No outsourced L1 chains.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-number">BSD-3</div>
+        <h4>No Lock-In</h4>
+        <p>The core is open source. You can fork, audit, or self-support. We earn your business on quality.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-number">2</div>
+        <h4>Products, One Stack</h4>
+        <p>OpenCAS and NVMCC share the OCF foundation. Expertise in one deepens the other.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════ CONTACT ═══════ -->
+<section id="contact">
+  <div class="container">
+    <span class="section-label">Contact</span>
+    <h2 class="section-title">Let's discuss your infrastructure</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>We respond to all serious inquiries within one business day. Whether you're exploring OpenCAS for production, applying for the NVMCC early access program, or want to discuss a partnership — reach out and we'll match you with the right engineer.</p>
+        <div class="contact-detail">
+          <div class="contact-row">
+            <div class="contact-row-icon">🌐</div>
+            <div class="contact-row-text"><a href="{{ .Site.Params.githubURL }}" target="_blank" rel="noopener">github.com/Open-CAS</a></div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-row-icon">💼</div>
+            <div class="contact-row-text"><a href="https://www.linkedin.com/company/unvertical/" target="_blank" rel="noopener">linkedin.com/company/unvertical</a></div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-row-icon">📍</div>
+            <div class="contact-row-text">Poland, EU · Serving customers globally</div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" action="https://formspree.io/f/{{ .Site.Params.formspreeID }}" method="POST">
+        <div class="form-row">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div>
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Your organization">
+          </div>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="_replyto" placeholder="you@company.com" required>
+        </div>
+        <div>
+          <label for="interest">I'm interested in</label>
+          <select id="interest" name="interest">
+            <optgroup label="OpenCAS">
+              <option value="cas-consulting">Consulting &amp; Architecture Review</option>
+              <option value="cas-support">Premium Support</option>
+              <option value="cas-validation">Configuration Validation</option>
+              <option value="cas-custom">Custom Development</option>
+              <option value="cas-training">Training</option>
+            </optgroup>
+            <optgroup label="NVMCC">
+              <option value="nvmcc-early">NVMCC Early Access Program</option>
+              <option value="nvmcc-partner">NVMCC Design Partnership</option>
+            </optgroup>
+            <optgroup label="Other">
+              <option value="oem">OEM / ISV Partnership</option>
+              <option value="other">Something else</option>
+            </optgroup>
+          </select>
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us about your environment, workloads, and what you're looking to achieve..."></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="New inquiry from unvertical.com">
+        <input type="hidden" name="_next" value="{{ "thank-you/" | absURL }}">
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+{{ end }}

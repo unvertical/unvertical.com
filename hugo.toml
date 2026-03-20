@@ -1,0 +1,42 @@
+baseURL = "https://unvertical.com/"
+languageCode = "en"
+title = "Unvertical — High-Performance Block Storage Caching"
+
+[params]
+  description = "Unvertical provides commercial support, consulting, and custom development for OpenCAS — the leading open-source block storage caching framework. Based in Poland, serving data centers worldwide."
+  formspreeID = "mzdjwgrq"
+  githubURL = "https://github.com/Open-CAS"
+  opencasDocsURL = "https://open-cas.com"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "dracula"
+    lineNos = false
+    guessSyntax = true
+
+[outputs]
+  home = ["HTML"]
+
+[taxonomies]
+  tag = "tags"
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/#about"
+    weight = 1
+  [[menu.main]]
+    name = "OpenCAS"
+    url = "/#opencas"
+    weight = 2
+  [[menu.main]]
+    name = "NVMCC"
+    url = "/#nvmcc"
+    weight = 3
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 4

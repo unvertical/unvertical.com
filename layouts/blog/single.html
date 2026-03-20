@@ -1,0 +1,39 @@
+{{ define "head" }}
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+{{ range .Params.tags }}<meta property="article:tag" content="{{ . }}">{{ end }}
+{{ end }}
+
+{{ define "main" }}
+
+<article class="blog-post">
+  <div class="container blog-container">
+
+    <header class="blog-post-header">
+      <a href="/blog/" class="blog-back">← Back to blog</a>
+      <div class="blog-card-meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        {{ range .Params.tags }}
+        <span class="blog-tag">{{ . }}</span>
+        {{ end }}
+      </div>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="blog-post-desc">{{ . }}</p>{{ end }}
+    </header>
+
+    <div class="blog-post-content">
+      {{ .Content }}
+    </div>
+
+    <footer class="blog-post-footer">
+      <div class="blog-post-cta">
+        <h3>Need help with your caching strategy?</h3>
+        <p>We're the team behind OpenCAS. If this post raised questions about your own infrastructure, let's talk.</p>
+        <a href="/#contact" class="btn btn-primary">Get in Touch</a>
+      </div>
+    </footer>
+
+  </div>
+</article>
+
+{{ end }}
