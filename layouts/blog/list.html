@@ -1,0 +1,39 @@
+{{ define "main" }}
+
+<section class="blog-header">
+  <div class="container">
+    <span class="section-label">Blog</span>
+    <h1 class="section-title">Engineering notes &amp; technical deep dives</h1>
+    <p class="section-desc">Benchmarks, architecture decisions, and insights from the team behind OpenCAS and NVMC.</p>
+  </div>
+</section>
+
+<section class="blog-list-section">
+  <div class="container">
+    {{ if .Pages }}
+    <div class="blog-grid">
+      {{ range .Pages }}
+      {{ if not .Draft }}
+      <a href="{{ .Permalink }}" class="blog-card">
+        <div class="blog-card-meta">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+          {{ range .Params.tags }}
+          <span class="blog-tag">{{ . }}</span>
+          {{ end }}
+        </div>
+        <h2>{{ .Title }}</h2>
+        <p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary | truncate 160 }}{{ end }}</p>
+        <span class="blog-read-more">Read more →</span>
+      </a>
+      {{ end }}
+      {{ end }}
+    </div>
+    {{ else }}
+    <div class="blog-empty">
+      <p>No posts yet. Check back soon — we're working on our first technical deep dives.</p>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+{{ end }}
