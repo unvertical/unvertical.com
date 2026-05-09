@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Card — Robert Bałdyga</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary:    #0a0c10;
+      --bg-card:       #161a24;
+      --border:        #262d3d;
+      --border-accent: #3a4562;
+      --text-primary:  #e8eaf0;
+      --text-secondary:#8b92a8;
+      --text-muted:    #5c6380;
+      --accent:        #4ecdc4;
+      --accent-dim:    #2a8a84;
+      --accent-glow:   rgba(78, 205, 196, 0.12);
+      --mono: 'JetBrains Mono', monospace;
+
+      /* 4px per mm for screen preview */
+      --mm: 4px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--mono);
+      background: #2a2a2a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      gap: 40px;
+      padding: 40px;
+    }
+
+    .print-hint {
+      color: #888;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .card-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .card-label {
+      color: #666;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* Bleed visualizer — inset frame the color of the page bg, blinks to show/hide bleed zone */
+    .bleed-frame {
+      position: absolute;
+      inset: 0;
+      box-shadow: inset 0 0 0 8px #2a2a2a;
+      pointer-events: none;
+      z-index: 20;
+      animation: blink-bleed 1s steps(1, end) infinite;
+    }
+
+    @keyframes blink-bleed {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 1; }
+    }
+
+    /* ── Card face ──────────────────────────────────────────
+       Outer size = bleed: 89×59mm = 356×236px at 4px/mm
+       Trim line:  2mm inset = 8px
+       Safe area:  4mm inset = 16px (content padding)
+    ───────────────────────────────────────────────────────── */
+    .card {
+      width:  356px;   /* 89mm */
+      height: 236px;   /* 59mm */
+      background: var(--bg-card);
+      border-radius: 0;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      padding: 16px 16px 16px 20px; /* safe area = 4mm; left adds room for accent stripe */
+    }
+
+
+    /* Subtle teal corner glow */
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 160px;
+      height: 160px;
+      background: radial-gradient(circle, rgba(78,205,196,0.14) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Accent left border stripe — extends to bleed edge so an off-cut leaves no gap */
+    .card::after {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 11px; /* 8px bleed + 3px visible inside trim */
+      background: linear-gradient(180deg, var(--accent) 0%, var(--accent-dim) 100%);
+    }
+
+    .card-top {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .card-name {
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--text-primary);
+      letter-spacing: -0.3px;
+    }
+
+    .card-title {
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--accent);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .card-bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .card-contact-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      color: var(--text-secondary);
+      letter-spacing: 0.2px;
+    }
+
+    .card-contact-row .icon {
+      font-size: 11px;
+      width: 14px;
+      text-align: center;
+      flex-shrink: 0;
+      color: var(--text-muted);
+    }
+
+    /* ── Back face ──────────────────────────────── */
+    .card-back {
+      background: var(--bg-primary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .card-back::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(78,205,196,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Back has no accent stripe — override ::after */
+    .card-back::after { display: none; }
+
+    .back-logo {
+      font-weight: 700;
+      font-size: 22px;
+      letter-spacing: -0.5px;
+      color: var(--text-primary);
+      position: relative;
+    }
+
+    .back-logo span { color: var(--accent); }
+
+    .back-tagline {
+      font-size: 9px;
+      color: var(--text-muted);
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      text-align: center;
+      position: relative;
+    }
+
+    .back-url {
+      font-size: 10px;
+      color: var(--accent-dim);
+      letter-spacing: 0.3px;
+      position: relative;
+      margin-top: 4px;
+    }
+
+    /* ── Print styles ───────────────────────────── */
+    @media print {
+      @page {
+        size: 89mm 59mm; /* full bleed canvas */
+        margin: 0;
+      }
+
+      body {
+        background: white;
+        padding: 0;
+        gap: 0;
+        display: block;
+      }
+
+      .print-hint,
+      .card-label,
+      .bleed-frame,
+      .card-wrapper + .card-wrapper { display: none; }
+
+      .card-wrapper:first-of-type .card {
+        width: 89mm;
+        height: 59mm;
+        border-radius: 0;
+        padding: 4mm 4mm 4mm 6mm; /* safe area: 4mm from bleed edge; extra left for stripe */
+        page-break-after: always;
+      }
+
+      .card-wrapper:first-of-type .card-back { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <p class="print-hint">Ctrl+P / Cmd+P · Paper: 89×59 mm · No margins · The dashed line shows the trim edge</p>
+
+  <!-- FRONT -->
+  <div class="card-wrapper">
+    <div class="card-label">Front</div>
+    <div class="card">
+      <div class="bleed-frame"></div>
+      <div class="card-top">
+        <div class="card-name">Robert Bałdyga</div>
+        <div class="card-title">Founder &amp; Open CAS Maintainer</div>
+      </div>
+      <div class="card-bottom">
+        <div class="card-contact-row">
+          <span class="icon">✉</span>
+          <span>robert.baldyga@unvertical.com</span>
+        </div>
+        <div class="card-contact-row">
+          <span class="icon">in</span>
+          <span>linkedin.com/in/robertbaldyga</span>
+        </div>
+        <div class="card-contact-row">
+          <span class="icon">gh</span>
+          <span>github.com/robertbaldyga</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK -->
+  <div class="card-wrapper">
+    <div class="card-label">Back</div>
+    <div class="card card-back">
+      <div class="bleed-frame"></div>
+      <div class="back-logo">un<span>vertical</span></div>
+      <div class="back-tagline">High-performance block storage caching <br>for modern data centers</div>
+      <div class="back-url">unvertical.com</div>
+    </div>
+  </div>
+
+</body>
+</html>
