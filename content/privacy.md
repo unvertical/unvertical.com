@@ -3,7 +3,7 @@ title: "Privacy Policy"
 description: "GDPR-compliant privacy notice."
 ---
 
-**Last updated:** August 1, 2026
+**Last updated:** September 15, 2026
 
 This Privacy Policy explains how Unvertical sp. z o.o. ("**Unvertical**", "we", "us", "our") processes personal data in connection with this website (unvertical.com), in accordance with Regulation (EU) 2016/679 (the "**GDPR**") and the Polish Personal Data Protection Act of 10 May 2018.
 
@@ -29,11 +29,11 @@ We only collect personal data that you voluntarily submit to us through the cont
 - the **subject area** of your inquiry (selected from a list);
 - the **content of your message**.
 
-We do **not** use cookies, web analytics, advertising trackers, retargeting pixels, or social-media trackers. We do not collect any personal data passively from visitors who simply browse the site.
+Apart from the contact form, we ask you for nothing. To measure website traffic we use our own self-hosted, cookie-free analytics, described in section 5; it does not identify you and does not store your IP address. We do **not** use cookies, advertising trackers, retargeting pixels, or social-media trackers, and we store no information on your device.
 
 ## 3. Why we process your data, and on what legal basis
 
-We process the data described in section 2 solely to read your inquiry, evaluate it, and respond to it.
+We process the data you submit through the contact form solely to read your inquiry, evaluate it, and respond to it.
 
 The legal basis is:
 
@@ -41,6 +41,8 @@ The legal basis is:
 - **Article 6(1)(f) GDPR** — our legitimate interest in responding to correspondence addressed to us — for any other inquiry.
 
 We do not use your data for marketing, profiling, or any purpose other than handling your inquiry.
+
+The separate legal basis for our website analytics is stated in section 5.
 
 ## 4. Form processor — Formspree
 
@@ -55,21 +57,31 @@ Because Formspree is established in the United States, your data is transferred 
 - **Hosting.** This website is a static site hosted on **GitHub Pages**, a service provided by GitHub, Inc. (United States), a subsidiary of Microsoft Corporation. When your browser requests a page, GitHub receives technical connection data — your IP address, the time of the request, and your user agent — and may log it to serve the site and to maintain the security and integrity of its service. GitHub processes this data under its own responsibility, not on our instructions; we do not receive, access, or store these server logs. GitHub's privacy statement is available at <https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement>.
 
   Because GitHub is established in the United States, serving this website involves a transfer of that technical data outside the European Economic Area. Such transfers are protected by the **EU–U.S. Data Privacy Framework** and/or by the **Standard Contractual Clauses** adopted by the European Commission, as applicable.
+- **Analytics.** To understand which parts of our website are used, we run our own installation of **GoatCounter**, an open-source, privacy-focused analytics tool, on a server we control at `analytics.cloud.unvertical.com`. No analytics company or advertising network is involved, and we share this data with no one.
+
+  When you open a page, a small script sends us the address of that page (including any query string), its title, the address of the page that referred you if you arrived through a link, your screen width, and whether the request appears automated. Your IP address and User-Agent header necessarily reach our server, as they do on any web request, but neither is ever written to disk. They are used only to look up a randomly generated identifier, which groups together the pages seen during a single visit so that we can distinguish a returning visit from a new one. The table connecting your IP address and browser to that random identifier is held in our server's memory alone and is discarded after at most eight hours, after which the stored statistics can no longer be connected to you by us or by anyone else. From the IP address we derive only a country, and from the User-Agent only a coarse browser and operating-system name; neither the address nor the full header is retained. Nothing is written to your device — no cookies, no localStorage, no tracker ID — and we do not track you across websites, build profiles, or seek to identify individual visitors.
+
+  This analytics installation runs on infrastructure rented from **netcup GmbH** (Germany), which acts as our data processor. The data does not leave the European Economic Area.
+
+  The legal basis is **Article 6(1)(f) GDPR** — our legitimate interest in maintaining and improving this website on the basis of aggregate usage statistics. Because the measurement neither stores information on nor reads information from your device, it does not require consent under Article 5(3) of the ePrivacy Directive as implemented in Polish law. You may object at any time under Article 21 GDPR (see section 8), and you can prevent the collection entirely by blocking `analytics.cloud.unvertical.com` in your browser or with a content blocker.
 - **Web fonts.** This site loads typefaces from the Google Fonts service operated by Google Ireland Limited. When your browser loads a font, it connects to Google's font CDN, which receives your IP address. Google does not set cookies for Google Fonts requests. Google's privacy notice is available at <https://policies.google.com/privacy>.
 
-We do not embed advertising, social-media trackers, third-party analytics, comment widgets, or any other third-party scripts.
+We do not embed advertising, social-media trackers, third-party analytics, comment widgets, or any other third-party scripts. The only script this website loads is our own analytics script described above.
 
 ## 6. How long we keep your data
 
 We retain contact form submissions for up to **24 months** from the date of submission, after which they are deleted from our systems. If a submission leads to an ongoing business relationship, related correspondence may be retained for the duration of that relationship and for any further period required by Polish accounting and commercial law.
+
+We keep the website statistics described in section 5 for as long as we operate this website, and do not delete them on a schedule. They contain no IP address and no User-Agent string. The pages seen during a single visit share a randomly generated identifier, but the means of connecting that identifier to any person exists only in our server's memory and is discarded within eight hours; from that point the statistics are anonymous, are no longer personal data, and the storage limitation in Article 5(1)(e) GDPR does not apply to them.
 
 ## 7. Recipients
 
 We do not sell, rent, or share your personal data with third parties for their own purposes. The only recipients of your data are:
 
 - members of our team who handle inquiries;
-- our processors: **Formspree** (form delivery) and the email service we use to deliver responses; and
-- **GitHub, Inc.**, which hosts this website and handles the technical connection data described in section 5 under its own responsibility.
+- our processors: **Formspree** (form delivery) and the email service we use to deliver responses;
+- **GitHub, Inc.**, which hosts this website and handles the technical connection data described in section 5 under its own responsibility; and
+- **netcup GmbH** (Germany), which provides the server infrastructure on which our own analytics installation runs, as our processor.
 
 ## 8. Your rights under the GDPR
 
