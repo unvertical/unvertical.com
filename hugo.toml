@@ -7,6 +7,7 @@ title = "Unvertical — High-Performance Block Storage Caching"
   formspreeID = "mzdjwgrq"
   githubURL = "https://github.com/Open-CAS"
   opencasDocsURL = "https://open-cas.com"
+  goatcounterURL = "https://analytics.cloud.unvertical.com/goatcounter"
 
 [markup]
   [markup.goldmark]
