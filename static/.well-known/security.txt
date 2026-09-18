@@ -1,0 +1,8 @@
+# Unvertical security contact information (RFC 9116)
+
+Contact: mailto:security@unvertical.com
+Expires: 2027-09-30T23:59:59.000Z
+Encryption: https://unvertical.com/pgp.asc
+Policy: https://unvertical.com/security/
+Preferred-Languages: en
+Canonical: https://unvertical.com/.well-known/security.txt
