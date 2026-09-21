@@ -428,75 +428,7 @@
 </section>
 
 
-<!-- ═══════ CONTACT ═══════ -->
-<section id="contact">
-  <div class="container">
-    <span class="section-label">Contact</span>
-    <h2 class="section-title">Let's discuss your infrastructure</h2>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <p>We respond to all serious inquiries within one business day. Whether you're exploring OpenCAS for production, applying for the NVMC early access program, or want to discuss a partnership — reach out and we'll match you with the right engineer.</p>
-        <div class="contact-detail">
-          <div class="contact-row">
-            <div class="contact-row-icon">🌐</div>
-            <div class="contact-row-text"><a href="{{ .Site.Params.githubURL }}" target="_blank" rel="noopener">github.com/Open-CAS</a></div>
-          </div>
-          <div class="contact-row">
-            <div class="contact-row-icon">💼</div>
-            <div class="contact-row-text"><a href="https://www.linkedin.com/company/unvertical/" target="_blank" rel="noopener">linkedin.com/company/unvertical</a></div>
-          </div>
-          <div class="contact-row">
-            <div class="contact-row-icon">📍</div>
-            <div class="contact-row-text">Poland, EU · Serving customers globally</div>
-          </div>
-        </div>
-      </div>
-      <form class="contact-form" action="https://formspree.io/f/{{ .Site.Params.formspreeID }}" method="POST">
-        <div class="form-row">
-          <div>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required>
-          </div>
-          <div>
-            <label for="company">Company</label>
-            <input type="text" id="company" name="company" placeholder="Your organization">
-          </div>
-        </div>
-        <div>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="_replyto" placeholder="you@company.com" required>
-        </div>
-        <div>
-          <label for="interest">I'm interested in</label>
-          <select id="interest" name="interest">
-            <optgroup label="OpenCAS">
-              <option value="cas-consulting">Consulting &amp; Architecture Review</option>
-              <option value="cas-support">Premium Support</option>
-              <option value="cas-validation">Configuration Validation</option>
-              <option value="cas-custom">Custom Development</option>
-              <option value="cas-training">Training</option>
-            </optgroup>
-            <optgroup label="NVMC">
-              <option value="nvmc-early">NVMC Early Access Program</option>
-              <option value="nvmc-partner">NVMC Design Partnership</option>
-            </optgroup>
-            <optgroup label="Other">
-              <option value="oem">OEM / ISV Partnership</option>
-              <option value="other">Something else</option>
-            </optgroup>
-          </select>
-        </div>
-        <div>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Tell us about your environment, workloads, and what you're looking to achieve..."></textarea>
-        </div>
-        <input type="hidden" name="_subject" value="New inquiry from unvertical.com">
-        <input type="hidden" name="_next" value="{{ "thank-you/" | absURL }}">
-        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Message</button>
-        <p class="form-privacy-note">By submitting this form you agree that your message and contact details will be processed by Unvertical and our form provider Formspree solely to respond to your inquiry. See our <a href="/privacy/">Privacy Policy</a>.</p>
-      </form>
-    </div>
-  </div>
-</section>
+<!-- ═══════ CONTACT (shared with /contact/) ═══════ -->
+{{ partial "contact.html" (dict "standalone" false) }}
 
 {{ end }}

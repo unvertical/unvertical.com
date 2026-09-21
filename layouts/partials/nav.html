@@ -7,7 +7,7 @@
       <li><a href="{{ .URL }}">{{ .Name }}</a></li>
       {{ end }}
       <li><div class="nav-divider"></div></li>
-      <li><a href="/#contact" class="nav-cta">Contact Us</a></li>
+      <li><a href="{{ if .IsHome }}#contact{{ else }}/contact/{{ end }}" class="nav-cta">Contact Us</a></li>
     </ul>
   </div>
 </nav>

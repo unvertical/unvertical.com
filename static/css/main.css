@@ -845,6 +845,9 @@ section { padding: 100px 0; }
 /* ── CONTACT ───────────────────────── */
 #contact { background: var(--bg-primary); }
 
+/* Standalone /contact/ page — extra top padding to clear the fixed nav */
+.contact-page { padding-top: 140px; }
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
