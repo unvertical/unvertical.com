@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Unvertical — a Hugo-based marketing site for a high-performance block storage caching company. Two product lines: Unvertical OpenCAS (open-core caching framework) and Unvertical NVMC — Non-Volatile Memory Cache (early access). Statically hosted on GitHub Pages.
+Unvertical — a Hugo-based marketing site for a high-performance block storage caching company. Two product lines: Unvertical OpenCAS (open-core caching framework) and Unvertical NVMC — Non-Volatile Memory Cache (early access). Statically hosted on statichost.eu.
 
 **Naming:** Unvertical is the single brand (the trademark); product names are plain descriptors, not separate trademarks. Use the full `Unvertical <Product>` form in product headings and first mentions; bare `OpenCAS` / `NVMC` is fine in running prose, nav, and section labels. Never reintroduce the old `NVMCC` / "NVM Cache for Compute" naming.
 
@@ -33,6 +33,4 @@ No Node.js dependencies — pure Hugo site with vanilla CSS.
 
 ## Deployment
 
-Statically hosted on **GitHub Pages**. `.github/workflows/deploy.yml` builds with Hugo extended and publishes via `actions/deploy-pages` — see that file for the trigger branch and step details. No deployment secrets are needed; it authenticates with the workflow's `GITHUB_TOKEN`.
-
-The custom domain is served from `static/CNAME`, which Hugo copies to the site root on build.
+Statically hosted on **statichost.eu**, which builds the site itself. `.github/workflows/statichost.yml` only triggers a rebuild by POSTing to the statichost.eu builder webhook — see that file for the trigger branch. It authenticates with the `STATICHOST_TOKEN` repo secret.
