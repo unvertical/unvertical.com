@@ -28,7 +28,7 @@
           </div>
         </div>
       </div>
-      <form class="contact-form" action="https://formspree.io/f/{{ site.Params.formspreeID }}" method="POST">
+      <form class="contact-form" action="{{ site.Params.contactFormURL }}" method="POST">
         <div class="form-row">
           <div>
             <label for="name">Name</label>
@@ -68,9 +68,9 @@
           <textarea id="message" name="message" placeholder="Tell us about your environment, workloads, and what you're looking to achieve..."></textarea>
         </div>
         <input type="hidden" name="_subject" value="New inquiry from unvertical.com">
-        <input type="hidden" name="_next" value="{{ "thank-you/" | absURL }}">
+        <input type="hidden" name="_redirect" value="{{ "thank-you/" | absURL }}">
         <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Message</button>
-        <p class="form-privacy-note">By submitting this form you agree that your message and contact details will be processed by Unvertical and our form provider Formspree solely to respond to your inquiry. See our <a href="/privacy/">Privacy Policy</a>.</p>
+        <p class="form-privacy-note">By submitting this form you agree that your message and contact details will be processed by Unvertical and our form provider Formward solely to respond to your inquiry. See our <a href="/privacy/">Privacy Policy</a>.</p>
       </form>
     </div>
   </div>

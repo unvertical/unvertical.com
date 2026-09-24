@@ -3,7 +3,7 @@ title: "Privacy Policy"
 description: "GDPR-compliant privacy notice."
 ---
 
-**Last updated:** September 15, 2026
+**Last updated:** September 24, 2026
 
 This Privacy Policy explains how Unvertical sp. z o.o. ("**Unvertical**", "we", "us", "our") processes personal data in connection with this website (unvertical.com), in accordance with Regulation (EU) 2016/679 (the "**GDPR**") and the Polish Personal Data Protection Act of 10 May 2018.
 
@@ -44,13 +44,13 @@ We do not use your data for marketing, profiling, or any purpose other than hand
 
 The separate legal basis for our website analytics is stated in section 5.
 
-## 4. Form processor — Formspree
+## 4. Form processor — Formward
 
-Form submissions are routed through **Formspree**, a service provided by Formspree, Inc. (United States), which acts as our data processor. Formspree receives the data you submit through the form, stores it on our behalf, and forwards it to us by email.
+Form submissions are routed through **Formward**, a service provided by EGF Fastighetsservice AB (Sweden), which acts as our data processor. Formward receives the data you submit through the form, stores it on our behalf, and forwards it to us by email.
 
-Formspree may retain submissions on its infrastructure in accordance with its own terms and privacy policy: <https://formspree.io/legal/privacy-policy/>.
+Formward stores submissions on servers located in Sweden and may retain them in accordance with its own terms and privacy policy: <https://formward.eu/privacy>.
 
-Because Formspree is established in the United States, your data is transferred outside the European Economic Area. Such transfers are protected by the **EU–U.S. Data Privacy Framework** and/or by the **Standard Contractual Clauses** adopted by the European Commission, as applicable.
+Form submissions are processed and stored within the European Economic Area; we do not use Formward features that would transfer your submission outside it.
 
 ## 5. Other technical processing
 
@@ -79,7 +79,7 @@ We keep the website statistics described in section 5 for as long as we operate 
 We do not sell, rent, or share your personal data with third parties for their own purposes. The only recipients of your data are:
 
 - members of our team who handle inquiries;
-- our processors: **Formspree** (form delivery) and the email service we use to deliver responses;
+- our processors: **Formward** (form delivery) and the email service we use to deliver responses;
 - **GitHub, Inc.**, which hosts this website and handles the technical connection data described in section 5 under its own responsibility; and
 - **netcup GmbH** (Germany), which provides the server infrastructure on which our own analytics installation runs, as our processor.
 

@@ -45,9 +45,9 @@ GitHub Actions (`.github/workflows/deploy.yml`).
    GitHub Pages (`A`/`AAAA` records to GitHub's IPs, or a `CNAME` to
    `<user>.github.io`), then enable **Enforce HTTPS** in Settings → Pages.
 
-### Formspree
+### Contact form
 
-Replace `YOUR_FORMSPREE_ID` in `hugo.toml` with your actual Formspree form endpoint ID (the part after `https://formspree.io/f/`).
+The contact form posts to [Formward](https://formward.eu). Set `contactFormURL` in `hugo.toml` to your form's full endpoint URL (`https://forms.formward.eu/f/<form-id>`).
 
 ## Project Structure
 

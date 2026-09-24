@@ -28,7 +28,7 @@ No Node.js dependencies — pure Hugo site with vanilla CSS.
 ## Configuration
 
 - `hugo.toml`: Base URL `https://unvertical.com/`, Goldmark with unsafe HTML enabled, Dracula code highlighting, tags taxonomy
-- Contact form uses Formspree (form ID configured in `hugo.toml`)
+- Contact form uses Formward (endpoint URL configured in `hugo.toml`)
 - Menu items configured in `hugo.toml` params
 
 ## Deployment

@@ -4,7 +4,7 @@ title = "Unvertical — High-Performance Block Storage Caching"
 
 [params]
   description = "Unvertical provides commercial support, consulting, and custom development for OpenCAS — the leading open-source block storage caching framework. Based in Poland, serving data centers worldwide."
-  formspreeID = "mzdjwgrq"
+  contactFormURL = "https://forms.formward.eu/f/800b284e-ac5b-43bb-99fa-55e9a63a614a"
   githubURL = "https://github.com/Open-CAS"
   opencasDocsURL = "https://open-cas.com"
   goatcounterURL = "https://analytics.cloud.unvertical.com/goatcounter"
