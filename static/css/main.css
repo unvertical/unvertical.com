@@ -559,17 +559,17 @@ section { padding: 100px 0; }
 
 .model-columns {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   margin-top: 48px;
-  background: var(--border);
-  border-radius: 8px;
-  overflow: hidden;
 }
 
-.model-col { padding: 40px; }
-.model-col.open { background: var(--bg-card); }
-.model-col.premium { background: var(--bg-primary); }
+.model-col {
+  padding: 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
 
 .model-col-header {
   display: flex;
@@ -585,16 +585,8 @@ section { padding: 100px 0; }
   align-items: center;
   justify-content: center;
   font-size: 18px;
-}
-
-.model-col.open .model-col-icon {
   background: rgba(78, 205, 196, 0.1);
   border: 1px solid var(--accent-dim);
-}
-
-.model-col.premium .model-col-icon {
-  background: rgba(247, 183, 49, 0.1);
-  border: 1px solid var(--accent-secondary-dim);
 }
 
 .model-col h3 { font-size: 18px; font-weight: 700; }
@@ -604,6 +596,12 @@ section { padding: 100px 0; }
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.model-inherit {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
 }
 
 .model-list {
@@ -621,20 +619,12 @@ section { padding: 100px 0; }
   line-height: 1.6;
 }
 
-.model-col.open .model-list li::before {
+.model-list li::before {
   content: '✓';
   position: absolute;
   left: 0;
   color: var(--accent);
   font-weight: 700;
-}
-
-.model-col.premium .model-list li::before {
-  content: '★';
-  position: absolute;
-  left: 0;
-  color: var(--accent-secondary);
-  font-size: 12px;
 }
 
 /* ── USE CASES ─────────────────────── */
@@ -1318,10 +1308,10 @@ footer {
 @media (max-width: 1024px) {
   .about-grid,
   .cas-overview-grid,
-  .model-columns,
   .contact-grid {
     grid-template-columns: 1fr;
   }
+  .model-col { padding: 28px 24px; }
   .services-grid,
   .nvmc-how,
   .economics-grid {
@@ -1345,6 +1335,7 @@ footer {
   }
   .mobile-toggle { display: block; }
   .hero-metrics { flex-direction: column; gap: 24px; }
+  .model-columns,
   .services-grid,
   .usecases-grid,
   .nvmc-how,
