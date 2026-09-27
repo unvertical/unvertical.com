@@ -878,6 +878,9 @@ section { padding: 100px 0; }
 
 .contact-info p a:hover { text-decoration: underline; }
 
+/* NVMC pages use the amber accent */
+#early-access .contact-info p a { color: var(--accent-secondary); }
+
 .contact-detail {
   display: flex;
   flex-direction: column;

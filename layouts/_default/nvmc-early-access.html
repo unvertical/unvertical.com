@@ -1,0 +1,79 @@
+{{ define "main" }}
+
+<section id="early-access" class="contact-page">
+  <div class="container">
+    <span class="section-label amber">NVMC · Early Access</span>
+    <h1 class="section-title">Apply for early access</h1>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>NVMC is at proof-of-concept stage. We're looking for 2–3 design partners running disaggregated storage who want to validate NVM-first caching on real workloads and help shape the product roadmap.</p>
+        <p>Tell us about your environment and what you'd like to achieve. We read every application and will get back to you within one business day. Want to know more first? Read about <a href="/nvmc/">NVMC</a>.</p>
+      </div>
+      <form class="contact-form" action="{{ site.Params.contactFormURL }}" method="POST">
+        {{ partial "form-identity-fields.html" . }}
+        <div class="form-row">
+          <div>
+            <label for="backend">Storage backend</label>
+            <select id="backend" name="backend" required>
+              <option value="" disabled selected>Select a backend</option>
+              <option>Ceph</option>
+              <option>NVMe-oF</option>
+              <option>NFS / NFS-over-RDMA</option>
+              <option>iSCSI</option>
+              <option>Fibre Channel SAN</option>
+              <option>HDFS</option>
+              <option>Other / mixed</option>
+            </select>
+          </div>
+          <div>
+            <label for="distro">Linux distribution</label>
+            <select id="distro" name="distro" required>
+              <option value="" disabled selected>Select a distribution</option>
+              {{ partial "distro-options.html" . }}
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label for="nodes">Number of compute nodes</label>
+            <input type="number" id="nodes" name="nodes" min="1" placeholder="e.g. 10">
+          </div>
+          <div>
+            <label for="dram">DRAM per node <span class="label-unit">(GiB)</span></label>
+            <input type="number" id="dram" name="dram_per_node_gib" min="0" step="any" placeholder="e.g. 512">
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label for="capacity">Dataset size <span class="label-unit">(TiB)</span></label>
+            <input type="number" id="capacity" name="dataset_tib" min="0" step="any" placeholder="e.g. 100">
+          </div>
+          <div>
+            <label for="timeline">Timeline</label>
+            <select id="timeline" name="timeline">
+              <option value="" disabled selected>Select a timeline</option>
+              <option>Ready to start now</option>
+              <option>Within 3 months</option>
+              <option>Within 6 months</option>
+              <option>Just exploring</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label for="environment">Environment</label>
+          <textarea id="environment" name="environment" placeholder="e.g. KVM / QEMU, Proxmox VE, OpenStack, Kubernetes, Ceph RBD, NVMe-oF, HDFS / Spark, databases on shared storage (PostgreSQL, MySQL, Oracle), network fabric (25/100 GbE, RDMA)..."></textarea>
+        </div>
+        <div>
+          <label for="message">What would you like to achieve?</label>
+          <textarea id="message" name="message" placeholder="Workloads, current pain points (latency, DRAM costs), what you'd like to validate..."></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="NVMC early access application from unvertical.com">
+        <input type="hidden" name="_redirect" value="{{ "thank-you/" | absURL }}">
+        <button type="submit" class="btn btn-amber" style="width:100%; justify-content:center;">Apply for Early Access</button>
+        <p class="form-privacy-note">Your details will be processed by Unvertical and our form provider Formward solely to evaluate your application. See our <a href="/privacy/">Privacy Policy</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+{{ end }}
