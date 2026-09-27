@@ -871,6 +871,13 @@ section { padding: 100px 0; }
   margin-bottom: 32px;
 }
 
+.contact-info p a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact-info p a:hover { text-decoration: underline; }
+
 .contact-detail {
   display: flex;
   flex-direction: column;

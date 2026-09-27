@@ -1,5 +1,5 @@
 ---
 title: "Contact"
-description: "Talk to the OpenCAS maintainers about consulting, premium support, custom development, or the Unvertical NVMC early access program."
+description: "Get in touch with the engineers behind Unvertical OpenCAS and Unvertical NVMC."
 layout: "contact"
 ---
