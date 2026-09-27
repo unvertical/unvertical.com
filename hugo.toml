@@ -38,8 +38,8 @@ title = "Unvertical — High-Performance Block Storage Caching"
     url = "/#opencas"
     weight = 3
   [[menu.main]]
-    name = "Plans"
-    url = "/#plans"
+    name = "Pricing"
+    url = "/#pricing"
     weight = 4
   [[menu.main]]
     name = "NVMC"

@@ -641,6 +641,13 @@ section { padding: 100px 0; }
   font-weight: 700;
 }
 
+.pricing-note {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
 /* ── USE CASES ─────────────────────── */
 .usecases-grid {
   display: grid;
