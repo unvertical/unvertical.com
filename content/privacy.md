@@ -3,7 +3,7 @@ title: "Privacy Policy"
 description: "GDPR-compliant privacy notice."
 ---
 
-**Last updated:** September 24, 2026
+**Last updated:** September 27, 2026
 
 This Privacy Policy explains how Unvertical sp. z o.o. ("**Unvertical**", "we", "us", "our") processes personal data in connection with this website (unvertical.com), in accordance with Regulation (EU) 2016/679 (the "**GDPR**") and the Polish Personal Data Protection Act of 10 May 2018.
 
@@ -21,32 +21,50 @@ For any matter concerning your personal data — including the exercise of any o
 
 ## 2. What personal data we collect
 
-We only collect personal data that you voluntarily submit to us through the contact form on this website. The form collects:
+We only collect personal data that you voluntarily submit to us through the forms on this website.
+
+The **contact form** collects:
 
 - your **name**;
 - your **email address**;
-- your **company or organization** (optional);
-- the **subject area** of your inquiry (selected from a list);
 - the **content of your message**.
 
-Apart from the contact form, we ask you for nothing. To measure website traffic we use our own self-hosted, cookie-free analytics, described in section 5; it does not identify you and does not store your IP address. We do **not** use cookies, advertising trackers, retargeting pixels, or social-media trackers, and we store no information on your device.
+The **quote request form** collects:
+
+- your **first and last name**;
+- your **email address**;
+- your **country**;
+- your **company or organization**;
+- your **job title** (optional);
+- **technical details of your planned deployment** — such as the subscription plan you are interested in, your Linux distribution, the number of nodes, storage capacity, and a description of your environment — and any **additional details** you choose to provide.
+
+The **NVMC early access application form** collects:
+
+- your **first and last name**;
+- your **email address**;
+- your **country**;
+- your **company or organization**;
+- your **job title** (optional);
+- **technical details of your environment** — such as your storage backend, Linux distribution, number of compute nodes, memory configuration, dataset size, timeline, and a description of your environment — and **what you would like to achieve**.
+
+Apart from these forms, we ask you for nothing. To measure website traffic we use our own self-hosted, cookie-free analytics, described in section 5; it does not identify you and does not store your IP address. We do **not** use cookies, advertising trackers, retargeting pixels, or social-media trackers, and we store no information on your device.
 
 ## 3. Why we process your data, and on what legal basis
 
-We process the data you submit through the contact form solely to read your inquiry, evaluate it, and respond to it.
+We process the data you submit through the forms on this website solely to read your inquiry, quote request, or early access application, evaluate it, and respond to it — including, for a quote request, preparing and sending you a quote, and, for an early access application, assessing whether your environment is a fit for the program.
 
 The legal basis is:
 
-- **Article 6(1)(b) GDPR** — processing necessary to take steps at your request prior to entering into a contract — when your inquiry concerns our products or services; or
+- **Article 6(1)(b) GDPR** — processing necessary to take steps at your request prior to entering into a contract — for quote requests, early access applications, and when your inquiry concerns our products or services; or
 - **Article 6(1)(f) GDPR** — our legitimate interest in responding to correspondence addressed to us — for any other inquiry.
 
-We do not use your data for marketing, profiling, or any purpose other than handling your inquiry.
+We do not use your data for marketing, profiling, or any purpose other than handling your inquiry, quote request, or early access application.
 
 The separate legal basis for our website analytics is stated in section 5.
 
 ## 4. Form processor — Formward
 
-Form submissions are routed through **Formward**, a service provided by EGF Fastighetsservice AB (Sweden), which acts as our data processor. Formward receives the data you submit through the form, stores it on our behalf, and forwards it to us by email.
+Form submissions are routed through **Formward**, a service provided by EGF Fastighetsservice AB (Sweden), which acts as our data processor. Formward receives the data you submit through the forms, stores it on our behalf, and forwards it to us by email.
 
 Formward stores submissions on servers located in Sweden and may retain them in accordance with its own terms and privacy policy: <https://formward.eu/privacy>.
 
@@ -70,7 +88,7 @@ We do not embed advertising, social-media trackers, third-party analytics, comme
 
 ## 6. How long we keep your data
 
-We retain contact form submissions for up to **24 months** from the date of submission, after which they are deleted from our systems. If a submission leads to an ongoing business relationship, related correspondence may be retained for the duration of that relationship and for any further period required by Polish accounting and commercial law.
+We retain form submissions (contact messages, quote requests, and early access applications) for up to **24 months** from the date of submission, after which they are deleted from our systems. If a submission leads to an ongoing business relationship, related correspondence may be retained for the duration of that relationship and for any further period required by Polish accounting and commercial law.
 
 We keep the website statistics described in section 5 for as long as we operate this website, and do not delete them on a schedule. They contain no IP address and no User-Agent string. The pages seen during a single visit share a randomly generated identifier, but the means of connecting that identifier to any person exists only in our server's memory and is discarded within eight hours; from that point the statistics are anonymous, are no longer personal data, and the storage limitation in Article 5(1)(e) GDPR does not apply to them.
 
