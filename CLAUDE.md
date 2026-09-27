@@ -18,7 +18,7 @@ No Node.js dependencies — pure Hugo site with vanilla CSS.
 
 ## Architecture
 
-- **Single-page marketing site**: The homepage (`layouts/index.html`, ~500 lines) contains all product sections (Hero, About, OpenCAS, NVMC, Why Unvertical, Contact)
+- **Single-page marketing site**: The homepage (`layouts/index.html`, ~500 lines) contains all product sections (Hero, About, OpenCAS, NVMC, Why Unvertical); the contact form lives on its own page (`layouts/_default/contact.html`, `/contact/`)
 - **Base template**: `layouts/_default/baseof.html` provides head/meta, nav partial, footer partial, and OG/Twitter meta tags
 - **Partials**: `nav.html` (fixed header with mobile toggle) and `footer.html`
 - **Blog**: Scaffolded with `layouts/blog/list.html` and `single.html` but no published posts yet. Archetype at `archetypes/blog.md`
