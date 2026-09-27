@@ -43,7 +43,7 @@ title = "Unvertical — High-Performance Block Storage Caching"
     weight = 4
   [[menu.main]]
     name = "NVMC"
-    url = "/#nvmc"
+    url = "/nvmc/"
     weight = 5
   [[menu.main]]
     name = "Blog"

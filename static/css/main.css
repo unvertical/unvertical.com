@@ -399,6 +399,7 @@ section { padding: 100px 0; }
   padding: 0 32px;
 }
 
+.product-divider h1,
 .product-divider h2 {
   font-family: var(--serif);
   font-size: clamp(32px, 5vw, 52px);
@@ -406,6 +407,11 @@ section { padding: 100px 0; }
   letter-spacing: -2px;
   line-height: 1.1;
   margin-bottom: 12px;
+}
+
+.product-divider.product-page {
+  padding-top: 140px;
+  border-top: none;
 }
 
 .product-divider .pd-sub {

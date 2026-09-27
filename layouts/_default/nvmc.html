@@ -1,0 +1,153 @@
+{{ define "main" }}
+
+<div class="product-divider amber product-page" id="nvmc">
+  <div class="product-divider-inner">
+    <span class="pd-badge amber">Early Access · Proof of Concept</span>
+    <h1>Unvertical NVMC</h1>
+    <p class="pd-sub">Non-Volatile Memory Cache — next-generation caching middleware that replaces expensive DRAM page cache with cost-effective NVM in disaggregated storage architectures.</p>
+  </div>
+</div>
+
+<!-- NVMC: The Problem -->
+<section class="nvmc-overview">
+  <div class="container">
+    <span class="section-label amber">NVMC · The Idea</span>
+    <h2 class="section-title">Trade DRAM cost for NVM capacity</h2>
+    <p class="section-desc" style="margin-bottom: 16px;">Modern data centers separate compute from storage for scalability, but this creates a latency problem. The standard fix — buffering data in DRAM page cache — is expensive and getting more so.</p>
+    <p class="section-desc">NVMC takes a fundamentally different approach.</p>
+    <div class="nvmc-how">
+      <div class="nvmc-step" data-step="01">
+        <h4>Observe the mismatch</h4>
+        <p>In disaggregated storage, DRAM used for caching is vastly overprovisioned in speed relative to the remote backend it fronts. That performance headroom is wasted money.</p>
+      </div>
+      <div class="nvmc-step" data-step="02">
+        <h4>Replace with cheaper media</h4>
+        <p>NVM (SLC NAND) is ~25× cheaper per GB than DDR5 but still orders of magnitude faster than remote storage. More capacity means higher hit ratio, which means better aggregate performance.</p>
+      </div>
+      <div class="nvmc-step" data-step="03">
+        <h4>Use the spare bandwidth</h4>
+        <p>Latency-bound workloads can't saturate network links to storage nodes. NVMC uses that idle bandwidth for speculative prefetching onto local NVM — trading bandwidth for latency.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NVMC: Economics -->
+<section>
+  <div class="container">
+    <span class="section-label amber">NVMC · Economics</span>
+    <h2 class="section-title">Why this matters now</h2>
+    <p class="section-desc">DRAM costs are rising sharply as manufacturers shift capacity from DDR5 to HBM for AI workloads. A technology that reduces DRAM dependency addresses an increasingly urgent need.</p>
+    <div class="economics-grid">
+      <div class="econ-card">
+        <div class="econ-value">~25×</div>
+        <div class="econ-label">Cost difference</div>
+        <div class="econ-desc">DDR5 at ~$25/GB vs SLC NAND at ~$1/GB. More cache capacity for less money.</div>
+      </div>
+      <div class="econ-card">
+        <div class="econ-value">+50%</div>
+        <div class="econ-label">DRAM price increase</div>
+        <div class="econ-desc">Spot prices rose ~50% in Q4 2025, with contract prices projected to follow at 45-50% QoQ.</div>
+      </div>
+      <div class="econ-card">
+        <div class="econ-value">30-50%</div>
+        <div class="econ-label">DRAM share of server CAPEX</div>
+        <div class="econ-desc">Memory is one of the largest line items in server costs. Reducing it has outsized impact on TCO.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NVMC: Differentiation -->
+<section class="model-section">
+  <div class="container">
+    <span class="section-label amber">NVMC · What's New</span>
+    <h2 class="section-title">The first NVM-first compute-side cache</h2>
+    <p class="section-desc">Every existing caching solution treats NVM as a secondary tier behind DRAM. NVMC inverts this hierarchy — NVM is the primary caching layer, not an afterthought.</p>
+    <div class="usecases-grid" style="margin-top: 48px;">
+      <div class="usecase amber">
+        <div class="usecase-icon amber">⚡</div>
+        <div>
+          <h4>NVM-First Cache Engine</h4>
+          <p>Purpose-built for NVM characteristics: read/write asymmetry, higher latency than DRAM, I/O granularity. Not a DRAM engine with NVM bolted on.</p>
+        </div>
+      </div>
+      <div class="usecase amber">
+        <div class="usecase-icon amber">📡</div>
+        <div>
+          <h4>Bandwidth-Aware Prefetching</h4>
+          <p>Real-time analysis of I/O patterns and network utilization. Proactively fetches data onto local NVM using spare link bandwidth — possible only with NVM's capacity advantage.</p>
+        </div>
+      </div>
+      <div class="usecase amber">
+        <div class="usecase-icon amber">🧠</div>
+        <div>
+          <h4>Minimal DRAM Footprint</h4>
+          <p>Redesigned metadata structures to minimize the engine's own DRAM consumption. The whole point is to reduce memory costs — the engine itself can't be the problem.</p>
+        </div>
+      </div>
+      <div class="usecase amber">
+        <div class="usecase-icon amber">🔌</div>
+        <div>
+          <h4>Transparent Block-Level Integration</h4>
+          <p>Plugs in as a middleware layer compatible with Ceph, KVM/QEMU, Proxmox, HDFS, and distributed databases. No application changes required.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NVMC: Target Environments -->
+<section>
+  <div class="container">
+    <span class="section-label amber">NVMC · Target Environments</span>
+    <h2 class="section-title">Built for disaggregated storage</h2>
+    <p class="section-desc">NVMC is designed for environments where compute and storage are separated — the architecture pattern where its NVM-first approach delivers the most value.</p>
+    <div class="usecases-grid" style="margin-top: 48px;">
+      <div class="usecase amber">
+        <div class="usecase-icon amber">☁</div>
+        <div>
+          <h4>Distributed Storage Clusters</h4>
+          <p>Ceph, NFS-over-RDMA, NVMe-oF — reduce latency from remote storage nodes by caching and prefetching on local NVM at the compute layer.</p>
+        </div>
+      </div>
+      <div class="usecase amber">
+        <div class="usecase-icon amber">🖥</div>
+        <div>
+          <h4>Virtualization with Remote Storage</h4>
+          <p>KVM/QEMU, Proxmox, OpenStack — accelerate VM disk I/O transparently while cutting the DRAM budget allocated to host page cache.</p>
+        </div>
+      </div>
+      <div class="usecase amber">
+        <div class="usecase-icon amber">🗄</div>
+        <div>
+          <h4>Databases on Shared Storage</h4>
+          <p>Reduce query latency and DRAM costs for databases running against remote or shared storage backends. Particularly effective for read-heavy and mixed workloads.</p>
+        </div>
+      </div>
+      <div class="usecase amber">
+        <div class="usecase-icon amber">📊</div>
+        <div>
+          <h4>Big Data &amp; Analytics</h4>
+          <p>HDFS, Spark, data lakes — cache iteratively accessed datasets locally on NVM. Speculative prefetching is especially effective for sequential scan patterns.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NVMC: Early Access CTA -->
+<section class="cta-section amber-bg" style="padding: 72px 0;">
+  <div class="container">
+    <div class="cta-inner">
+      <span class="section-label amber">Early Adopter Program</span>
+      <h2 class="section-title">Help shape the future of compute-side caching</h2>
+      <p class="section-desc">NVMC is currently at proof-of-concept stage. We're looking for 2–3 design partners with disaggregated storage environments who want to validate the technology on real workloads and influence the product roadmap.</p>
+      <div class="cta-actions">
+        <a href="/contact/" class="btn btn-amber">Apply for Early Access</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
