@@ -27,8 +27,8 @@
 
     <footer class="blog-post-footer">
       <div class="blog-post-cta">
-        <h3>Need help with your caching strategy?</h3>
-        <p>We're the team behind OpenCAS. If this post raised questions about your own infrastructure, let's talk.</p>
+        <h3>{{ .Params.cta_title | default "Need help with your caching strategy?" }}</h3>
+        <p>{{ .Params.cta_text | default "We're the team behind OpenCAS. If this post raised questions about your own infrastructure, let's talk." }}</p>
         <a href="/contact/" class="btn btn-primary">Get in Touch</a>
       </div>
     </footer>
