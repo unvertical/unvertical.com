@@ -1,4 +1,28 @@
+/* Light theme: the whole page except the nav */
 :root {
+  --bg-primary: #f7f8fa;
+  --bg-secondary: #eef1f5;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f3f5f8;
+  --border: #dde2ea;
+  --border-accent: #c3cad8;
+  --text-primary: #141821;
+  --text-secondary: #4a5163;
+  --text-muted: #6b7285;
+  --accent: #17827b;
+  --accent-dim: #8fd3cd;
+  --accent-glow: rgba(23, 130, 123, 0.08);
+  --accent-secondary: #a86a00;
+  --accent-secondary-dim: rgba(168, 106, 0, 0.35);
+  --accent-secondary-glow: rgba(247, 183, 49, 0.12);
+  --red-soft: #d64545;
+  --mono: 'JetBrains Mono', monospace;
+  --serif: 'Source Serif 4', Georgia, serif;
+}
+
+/* Dark theme: nav. Custom properties inherit as computed values, so the
+   nav must re-resolve its own text color. */
+nav {
   --bg-primary: #0a0c10;
   --bg-secondary: #11141b;
   --bg-card: #161a24;
@@ -15,8 +39,7 @@
   --accent-secondary-dim: rgba(247, 183, 49, 0.3);
   --accent-secondary-glow: rgba(247, 183, 49, 0.08);
   --red-soft: #ff6b6b;
-  --mono: 'JetBrains Mono', monospace;
-  --serif: 'Source Serif 4', Georgia, serif;
+  color: var(--text-primary);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -131,8 +154,8 @@ nav {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(38, 45, 61, 0.3) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(38, 45, 61, 0.3) 1px, transparent 1px);
+    linear-gradient(rgba(20, 24, 33, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 24, 33, 0.06) 1px, transparent 1px);
   background-size: 60px 60px;
   mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black 20%, transparent 70%);
 }
@@ -234,8 +257,9 @@ nav {
 }
 
 .btn-amber {
-  background: var(--accent-secondary);
-  color: var(--bg-primary);
+  /* Always the bright amber: the light theme's darker text amber is too murky for a fill */
+  background: #f7b731;
+  color: #0a0c10;
 }
 
 .btn-amber:hover {
@@ -386,11 +410,11 @@ section { padding: 100px 0; }
 }
 
 .product-divider.teal {
-  background: linear-gradient(180deg, rgba(78, 205, 196, 0.04) 0%, var(--bg-primary) 100%);
+  background: linear-gradient(180deg, rgba(78, 205, 196, 0.04) 0%, var(--bg-primary) 100%), var(--bg-primary);
 }
 
 .product-divider.amber {
-  background: linear-gradient(180deg, rgba(247, 183, 49, 0.04) 0%, var(--bg-primary) 100%);
+  background: linear-gradient(180deg, rgba(247, 183, 49, 0.04) 0%, var(--bg-primary) 100%), var(--bg-primary);
 }
 
 .product-divider-inner {
