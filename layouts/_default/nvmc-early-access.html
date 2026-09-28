@@ -69,8 +69,9 @@
         </div>
         <input type="hidden" name="_subject" value="NVMC early access application from unvertical.com">
         <input type="hidden" name="_redirect" value="{{ "thank-you/" | absURL }}">
+        {{ partial "turnstile.html" . }}
         <button type="submit" class="btn btn-amber" style="width:100%; justify-content:center;">Apply for Early Access</button>
-        <p class="form-privacy-note">Your details will be processed by Unvertical and our form provider Formward solely to evaluate your application. See our <a href="/privacy/">Privacy Policy</a>.</p>
+        <p class="form-privacy-note">Your details will be processed by Unvertical and our form provider Formward (with Cloudflare Turnstile for spam protection) solely to evaluate your application. See our <a href="/privacy/">Privacy Policy</a>.</p>
       </form>
     </div>
   </div>

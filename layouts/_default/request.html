@@ -49,8 +49,9 @@
         </div>
         <input type="hidden" id="subject" name="_subject" value="Quote request from unvertical.com">
         <input type="hidden" name="_redirect" value="{{ "thank-you/" | absURL }}">
+        {{ partial "turnstile.html" . }}
         <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Request a Quote</button>
-        <p class="form-privacy-note">Your details will be processed by Unvertical and our form provider Formward solely to prepare your quote. See our <a href="/privacy/">Privacy Policy</a>.</p>
+        <p class="form-privacy-note">Your details will be processed by Unvertical and our form provider Formward (with Cloudflare Turnstile for spam protection) solely to prepare your quote. See our <a href="/privacy/">Privacy Policy</a>.</p>
       </form>
     </div>
   </div>

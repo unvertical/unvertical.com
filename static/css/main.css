@@ -588,6 +588,7 @@ section { padding: 100px 0; }
 
 .model-col-icon {
   width: 40px; height: 40px;
+  flex: none;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -595,7 +596,11 @@ section { padding: 100px 0; }
   font-size: 18px;
   background: rgba(78, 205, 196, 0.1);
   border: 1px solid var(--accent-dim);
+  color: var(--accent);
 }
+
+.model-col-icon .layer-off { stroke: var(--accent-dim); opacity: 0.7; }
+.model-col-icon .layer-top { fill: currentColor; fill-opacity: 0.25; }
 
 .model-col h3 { font-size: 18px; font-weight: 700; }
 

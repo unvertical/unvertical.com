@@ -8,6 +8,7 @@ title = "Unvertical — High-Performance Block Storage Caching"
   githubURL = "https://github.com/Open-CAS"
   opencasDocsURL = "https://open-cas.com"
   goatcounterURL = "https://analytics.cloud.unvertical.com/goatcounter"
+  turnstileSiteKey = "0x4AAAAAAFFY6gG4pg5CrCFk"  # Cloudflare Turnstile site key; secret key goes in Formward form settings
 
 [markup]
   [markup.goldmark]

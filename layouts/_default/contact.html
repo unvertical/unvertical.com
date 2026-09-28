@@ -40,8 +40,9 @@
         </div>
         <input type="hidden" name="_subject" value="New message from unvertical.com">
         <input type="hidden" name="_redirect" value="{{ "thank-you/" | absURL }}">
+        {{ partial "turnstile.html" . }}
         <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Message</button>
-        <p class="form-privacy-note">Your message and contact details will be processed by Unvertical and our form provider Formward solely to respond to your inquiry. See our <a href="/privacy/">Privacy Policy</a>.</p>
+        <p class="form-privacy-note">Your message and contact details will be processed by Unvertical and our form provider Formward (with Cloudflare Turnstile for spam protection) solely to respond to your inquiry. See our <a href="/privacy/">Privacy Policy</a>.</p>
       </form>
     </div>
   </div>

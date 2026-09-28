@@ -3,7 +3,7 @@ title: "Privacy Policy"
 description: "GDPR-compliant privacy notice."
 ---
 
-**Last updated:** September 27, 2026
+**Last updated:** September 28, 2026
 
 This Privacy Policy explains how Unvertical sp. z o.o. ("**Unvertical**", "we", "us", "our") processes personal data in connection with this website (unvertical.com), in accordance with Regulation (EU) 2016/679 (the "**GDPR**") and the Polish Personal Data Protection Act of 10 May 2018.
 
@@ -47,7 +47,7 @@ The **NVMC early access application form** collects:
 - your **job title** (optional);
 - **technical details of your environment** — such as your storage backend, Linux distribution, number of compute nodes, memory configuration, dataset size, timeline, and a description of your environment — and **what you would like to achieve**.
 
-Apart from these forms, we ask you for nothing. To measure website traffic we use our own self-hosted, cookie-free analytics, described in section 5; it does not identify you and does not store your IP address. We do **not** use cookies, advertising trackers, retargeting pixels, or social-media trackers, and we store no information on your device.
+Apart from these forms, we ask you for nothing. To measure website traffic we use our own self-hosted, cookie-free analytics, described in section 5; it does not identify you and does not store your IP address. To protect the forms from spam, the form pages use Cloudflare Turnstile, also described in section 5. We do **not** use cookies, advertising trackers, retargeting pixels, or social-media trackers.
 
 ## 3. Why we process your data, and on what legal basis
 
@@ -82,9 +82,14 @@ Form submissions are processed and stored within the European Economic Area; we 
   This analytics installation runs on infrastructure rented from **netcup GmbH** (Germany), which acts as our data processor. The data does not leave the European Economic Area.
 
   The legal basis is **Article 6(1)(f) GDPR** — our legitimate interest in maintaining and improving this website on the basis of aggregate usage statistics. Because the measurement neither stores information on nor reads information from your device, it does not require consent under Article 5(3) of the ePrivacy Directive as implemented in Polish law. You may object at any time under Article 21 GDPR (see section 8), and you can prevent the collection entirely by blocking `analytics.cloud.unvertical.com` in your browser or with a content blocker.
+- **Spam protection.** The contact, quote request, and NVMC early access form pages load **Cloudflare Turnstile**, a bot-detection service provided by Cloudflare, Inc. (United States), to keep automated spam out of our inbox. When you open one of these pages, Turnstile runs a short, non-interactive check in your browser and sends Cloudflare technical signals — your IP address, TLS fingerprint, User-Agent header, and the identity of this website. The result is attached to your form submission as a one-time token, which our form processor Formward verifies with Cloudflare before accepting the submission. Turnstile does not receive the contents of the form. It is not loaded on any other page of this website.
+
+  Cloudflare processes these signals on our behalf, as our processor, to tell humans from bots, and as an independent controller to improve its bot detection. Its Turnstile privacy addendum is available at <https://www.cloudflare.com/turnstile-privacy-policy/>. Because Cloudflare is established in the United States, this involves a transfer of that technical data outside the European Economic Area, protected by the **EU–U.S. Data Privacy Framework** and/or by the **Standard Contractual Clauses** adopted by the European Commission, as applicable.
+
+  The legal basis is **Article 6(1)(f) GDPR** — our legitimate interest in protecting our forms and inbox from automated abuse. The check is strictly necessary to provide the form submission you request, and it is used for no other purpose.
 - **Web fonts.** This site loads typefaces from the Google Fonts service operated by Google Ireland Limited. When your browser loads a font, it connects to Google's font CDN, which receives your IP address. Google does not set cookies for Google Fonts requests. Google's privacy notice is available at <https://policies.google.com/privacy>.
 
-We do not embed advertising, social-media trackers, third-party analytics, comment widgets, or any other third-party scripts. The only script this website loads is our own analytics script described above.
+We do not embed advertising, social-media trackers, third-party analytics, comment widgets, or any other third-party scripts. The only scripts this website loads are our own analytics script and, on the form pages only, the Cloudflare Turnstile script described above.
 
 ## 6. How long we keep your data
 
@@ -98,7 +103,8 @@ We do not sell, rent, or share your personal data with third parties for their o
 
 - members of our team who handle inquiries;
 - our processors: **Formward** (form delivery) and the email service we use to deliver responses;
-- **GitHub, Inc.**, which hosts this website and handles the technical connection data described in section 5 under its own responsibility; and
+- **GitHub, Inc.**, which hosts this website and handles the technical connection data described in section 5 under its own responsibility;
+- **Cloudflare, Inc.** (United States), which provides the spam protection on our form pages described in section 5, as our processor and, for improving its bot detection, as an independent controller; and
 - **netcup GmbH** (Germany), which provides the server infrastructure on which our own analytics installation runs, as our processor.
 
 ## 8. Your rights under the GDPR
