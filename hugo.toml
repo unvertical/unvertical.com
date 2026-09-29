@@ -3,6 +3,7 @@ languageCode = "en"
 title = "Unvertical — High-Performance Block Storage Caching"
 
 [params]
+  author = "Robert Bałdyga"  # default blog post author; override per post with author in front matter
   description = "Unvertical provides commercial support, consulting, and custom development for OpenCAS — the leading open-source block storage caching framework. Based in Poland, serving data centers worldwide."
   contactFormURL = "https://forms.formward.eu/f/800b284e-ac5b-43bb-99fa-55e9a63a614a"
   githubURL = "https://github.com/Open-CAS"
