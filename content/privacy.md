@@ -14,7 +14,7 @@ The data controller for personal data processed in connection with this website 
 **Unvertical Spółka z Ograniczoną Odpowiedzialnością** (Unvertical Sp. z o.o.)<br>
 ul. Hetmańska 25, 15-727 Białystok, Poland<br>
 Entered in the Register of Entrepreneurs of the National Court Register (*Krajowy Rejestr Sądowy*) kept by the District Court in Białystok, XII Commercial Division of the National Court Register, under KRS number **0001249880**<br>
-NIP **5423516506** &middot; REGON **545082020** &middot; Share capital: PLN 5,000<br>
+NIP **5423516506** &middot; REGON **545082020** &middot; Share capital: PLN 50,000<br>
 *privacy@unvertical.com*
 
 For any matter concerning your personal data — including the exercise of any of your rights described below — please use the email address above.
