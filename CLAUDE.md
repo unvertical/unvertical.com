@@ -23,7 +23,7 @@ No Node.js dependencies — pure Hugo site with vanilla CSS.
 - **Partials**: `nav.html` (fixed header with mobile toggle) and `footer.html`
 - **Blog**: Scaffolded with `layouts/blog/list.html` and `single.html` but no published posts yet. Archetype at `archetypes/blog.md`
 - **CSS**: Single file `static/css/main.css` (~1350 lines) with CSS custom properties for theming (dark theme, `--accent: #4ecdc4` teal, `--accent-secondary: #f7b731` amber)
-- **Fonts**: JetBrains Mono (monospace) and Source Serif 4 (serif) via Google Fonts CDN
+- **Fonts**: JetBrains Mono (monospace, UI chrome), Noto Sans (body prose), and Source Serif 4 (headings) via Google Fonts CDN
 
 ## Configuration
 

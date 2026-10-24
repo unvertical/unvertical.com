@@ -18,6 +18,7 @@
   --red-soft: #d64545;
   --mono: 'JetBrains Mono', monospace;
   --serif: 'Source Serif 4', Georgia, serif;
+  --sans: 'Noto Sans', sans-serif;
 }
 
 /* Dark theme: nav. Custom properties inherit as computed values, so the
@@ -56,6 +57,10 @@ body {
   line-height: 1.7;
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
+}
+
+main p, main li {
+  font-family: var(--sans);
 }
 
 /* ── NAV ───────────────────────────── */
@@ -1183,7 +1188,7 @@ footer {
 }
 
 .blog-post-content {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 17px;
   line-height: 1.85;
   color: var(--text-secondary);
